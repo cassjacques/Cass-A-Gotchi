@@ -1,0 +1,11 @@
+Player clicks start to progress to the name screen.
+Player inputs a name & clicks submit.
+Player is greeted by tama and is prompted to press another start button
+
+once through the introductory screen the player will see the name, age, and 3progress bars. The user will also be presented with 3 buttons that correspond to the 3 progress bars: food, rest, entertainment.
+
+If the user clicks the food button _________ and the food bar will fill.
+
+If the user clicks the drowsiness/sleep button the screen colors will invert, the tama will sleep, and the rest bar will fill.
+
+If the user clicks boredom/play a ball (or other toy) will pop onto the screen and the entertainment bar will fill.

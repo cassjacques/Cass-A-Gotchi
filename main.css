@@ -1,3 +1,22 @@
 body {
-    background-color: blueviolet;
+    background-color: pink;
+}
+
+#tamaConsole {
+    background-color: lavender;
+    height: 400px;
+    width: 400px;
+    border-radius: 75% 75% 50% 50%;
+    border: 10px solid hotpink;
+}
+
+.buttons {
+    position: relative;
+    top: 85%;
+    left: 35%;
+}
+
+button {
+    background-color: greenyellow;
+    border-radius: 50%;
 }
