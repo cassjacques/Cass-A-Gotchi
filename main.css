@@ -3,6 +3,7 @@ body {
 }
 
 #tamaConsole {
+    margin: auto;
     background-color: lavender;
     height: 400px;
     width: 400px;
@@ -10,9 +11,46 @@ body {
     border: 10px solid hotpink;
 }
 
+.tamaScreen {
+    margin: auto;
+    background-color: darkgray;
+    height: 300px;
+    width: 300px;
+    border-radius: 75% 75% 50% 50%;
+}
+
+.friendo { 
+    margin: auto;
+    width: 60px;
+}
+
+.circle {
+    background-color: black;
+    height: 50px;
+    width: 50px;
+    border-radius: 50%;
+}
+
+.square {
+    background-color: black;
+    height: 60px;
+    width: 50px;
+}
+
+.bars {
+    margin: auto;
+    width: 50px;
+    justify-content: center;
+    padding: 90px 0 0 0;
+}
+
+.bar {
+    
+}
+
 .buttons {
     position: relative;
-    top: 85%;
+    top: 90%;
     left: 35%;
 }
 
