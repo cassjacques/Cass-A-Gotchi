@@ -1,5 +1,6 @@
 body {
-    background-color: pink;
+    background-color: cornflowerblue;
+    min-height: 100vh;
 }
 
 #tamaConsole {
@@ -21,43 +22,81 @@ body {
     left: 12.5%;
     justify-content: center;
     position: absolute;
-    border: 2px solid hotpink;
+    background-image: url(https://i.pinimg.com/originals/b5/5d/e9/b55de92ccc1c64390a41ac7784615eb2.png);
     background-color: darkgray;
+    background-position: center;
+    border: 2px solid hotpink;
     height: 450px;
     width: 450px;
     border-radius: 75% 75% 50% 50%;
 }
 
-.friendo { 
-    margin-top: 40%;
-    margin-left: 43.5%;
-    position: absolute;
-    padding: 50px 0 0 0;
-    background-color: black;
-    height: 50px;
-    width: 50px;
-    border-radius: 50%;
+#friendo { 
+    animation-name: waiting;
+    animation-duration: 1.5s;
+    animation-timing-function: ease-out;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
 }
 
-.square {
-    background-color: black;
-    height: 60px;
-    width: 50px;
+.eyes {
+    color: pink;
+    position: relative;
+    bottom: 58%;
+    left: 17%;
+}
+
+.circle {
+    border-radius: 50% 50% 0 0;
+    height: 50px;
+    width: 80px;
+    padding: 50px 0 0 0;
+    background-color: rgb(247, 228, 85);
+    opacity: .85;
+    border: 1px solid black;
+}
+
+@keyframes waiting {
+    from {
+        margin-top: 150px;
+        margin-left: 185px;
+    }
+
+    to {
+        margin-top: 200px;
+        margin-left: 185px;
+    }
+}
+
+@keyframes cry {
+
+}
+
+@keyframes yawn {
+
+}
+
+@keyframes bounce {
+
+}
+
+@keyframes happy {
+
 }
 
 .bars {
     display: flex;
     flex-direction: row;
     position: absolute;
-    left: 12.6%;
-    top: 86%;
+    left: 12.5%;
+    bottom: 6%;
 }
 
 .bar {
     height: 10px;
     width: 100px;
-    border: 1px solid black;
-    background-color: green;
+    border: 2px solid black;
+    background-color: rgb(252, 178, 252);
     margin: 5px;
 }
 
@@ -72,7 +111,7 @@ button {
     margin: 0 21px 0 21px;
     height: 50px;
     width: 50px;
-    background-color: greenyellow;
+    background-color: rgb(252, 178, 252);
     border-radius: 50%;
 }
 
@@ -83,14 +122,26 @@ p {
     top: 70%;
     left: .5%;
     color: gold;
-    -webkit-text-stroke-width: 1px;
+    -webkit-text-stroke-width: 2px;
     -webkit-text-stroke-color: black;
     font-size: 18px;
 }
 
 i {
     font-size: 27px;
-    color: purple;
     -webkit-text-stroke-width: 1px;
     -webkit-text-stroke-color: black;
 }
+
+.foodBtn {
+    color: rgb(225, 51, 75);
+}
+
+.restBtn {
+    color: rgb(231, 254, 77);
+}
+
+.playBtn {
+    color: rgb(79, 153, 221);
+}
+
