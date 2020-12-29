@@ -126,7 +126,7 @@ body {
     top: 0;
     width: 10px;
     height: 20px;
-    background:  rgb(252, 178, 252);;
+    background:  rgb(252, 178, 252);
     border-radius: 50px 50px 0 0;
     transform: rotate(-45deg);
     transform-origin: 0 100%;
@@ -160,11 +160,30 @@ body {
     margin: 10px auto 0px auto;
    }
 
+#ball {
+    position: absolute; 
+    display: inline-block;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    background-color: rgb(252, 178, 252);
+    border: 1px solid black;
+    left: 15px;
+}
+
 .foodAnimation {
     animation-name: food;
     animation-duration: .5s;
     animation-timing-function: linear;
     animation-iteration-count: 5.5;
+    animation-direction: alternate;
+}
+
+.playAnimation {
+    animation-name: play;
+    animation-duration: 2s;
+    animation-timing-function: linear;
+    animation-iteration-count: 3;
     animation-direction: alternate;
 }
 
@@ -192,19 +211,31 @@ body {
     }
 }
 
-@keyframes cry {
+@keyframes play {
+    from {
+        top: 200px;
+        left: 0px
+    }
 
-}
+    25% {
+        top: 250px;
+        left: 88px;
+    }
 
-@keyframes yawn {
+    50% {
+        top: 300px;
+        left: 176px;
+    }
 
-}
+    75% {
+        top: 250px;
+        left: 264px;
+    }
 
-@keyframes bounce {
-
-}
-
-@keyframes happy {
+    to {
+        top: 200px;
+        left: 355px; 
+    }
 
 }
 
