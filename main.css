@@ -79,8 +79,7 @@ body {
 }
 
 #friendo { 
-    position: absolute;
-
+    position: relative;
     animation-name: waiting;
     animation-duration: 1.5s;
     animation-timing-function: ease-out;
@@ -243,72 +242,18 @@ body {
 
 }
 
-#progressBars {
-    position: absolute;
-    left: 8%;
-    top: 95%;
-    display: flex;
-    flex-direction: row;
-    position: relative;
-  }
+.progressBar {
+    padding: 5px;
+}
 
-  .progressbar {
-    height: 10px;
-    width: 100px;
-    border: solid 1px black;
-    background: rgb(252, 178 , 252);
-    margin: 5px;
+  li {
+      list-style-type: none;
+      background-color: yellowgreen;
+      height: 20px;
+      width: 10%;
+      float: left;
   }
   
-  .progressbar .inner {
-    height: 10px;
-    animation: progressbar-countdown;
-    animation-duration: 60s;
-    animation-iteration-count: 1;
-    animation-fill-mode: forwards;
-    animation-play-state: paused;
-    
-  }
-
-  @keyframes progressbar-countdown {
-    0% {
-      width: 100px;
-      background: cyan;
-    }
-    10% {
-        width: 90px;
-    }
-    20% {
-        width: 80px;
-    }
-    30% {
-        width: 70px;
-    }
-    40% {
-        width: 60px;
-    }
-    50% {
-        width: 50px;
-    }
-    60% {
-        width: 40px;
-    }
-    70% {
-        width: 30px;
-    }
-    80% {
-        width: 20px;
-    }
-    90% {
-        width: 10px;
-    }
-    100% {
-      width: 0%;
-      background: red;
-    }
-  }
-/*I found the format for this code on stackoverflow*/
-
 #buttons {
     position: relative;
     top: 32%;

@@ -1,7 +1,26 @@
+function updateProgressBar(id) {
+    const target = document.querySelector(id);
+    const increments = target.querySelectorAll('li');
+
+    if (increments && increments.length < 10) {
+        const newIncr = document.createElement('li');
+        target.appendChild(newIncr);
+    }
+    else {
+        deadtama();
+    }
+}
+
+function resetProgressBar(id){
+    const target = document.querySelector(id);
+    target.innerHTML="";
+}
+
 const foodBtn = document.getElementById('foodBtn');
 const mouth = document.getElementById('mouth');
 
 foodBtn.addEventListener('click', function (event) {
+    resetProgressBar('#hunger');
     mouth.classList.remove('foodAnimation');
     mouth.classList.add('foodAnimation');
     setTimeout(function () {
@@ -35,34 +54,16 @@ mouth.addEventListener('animationend', function () {
 
 ball.addEventListener('animationend', function () {
     ball.classList.remove('playAnimation');
-}); 
+});
 
-function createProgressbar(id, duration, callback) {
-    // We select the div that we want to turn into a progressbar
-    var progressbar = document.getElementById(id);
-    progressbar.className = 'progressbar';
-  
-    // We create the div that changes width to show progress
-    var progressbarinner = document.createElement('div');
-    progressbarinner.className = 'inner';
-  
-    // Now we set the animation parameters
-    progressbarinner.style.animationDuration = duration;
-  
-    // Eventually couple a callback
-    if (typeof(callback) === 'function') {
-      progressbarinner.addEventListener('animationend', callback);
-    }
-  
-    // Append the progressbar to the main progressbardiv
-    progressbar.appendChild(progressbarinner);
-  
-    // When everything is set up we start the animation
-    progressbarinner.style.animationPlayState = 'running';
-  }
-  
-  addEventListener('load', function() {
-    createProgressbar('hunger', '40s');
-    createProgressbar('exhaustion', '30s');
-    createProgressbar('boredom', '20s')
-  });
+function deadtama() {
+    console.log('I ded');
+    //add animation here
+}
+
+
+setInterval(function(){ 
+    updateProgressBar('#hunger');
+    updateProgressBar('#exhaustion');
+    updateProgressBar('#boredom');
+}, 1000);
