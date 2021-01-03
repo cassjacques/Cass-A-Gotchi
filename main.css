@@ -1,6 +1,7 @@
 body {
     background-color: cornflowerblue;
-    min-height: 100vh;
+    min-height: 10vh;
+    min-width: 10vw;
   }
   
   .light {
@@ -302,13 +303,13 @@ body {
     float: left;
     align-items: center;
     left: 8.5%;
-    top: 85%;
+    top: 90%;
   }
   
   li {
     list-style-type: none;
     background-color: cyan;
-    height: 20px;
+    height: 10px;
     width: 10%;
     float: left;
   }
