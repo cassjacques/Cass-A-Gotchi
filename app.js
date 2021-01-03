@@ -1,3 +1,10 @@
+function nameTheGhost() {
+    var n = document.getElementById("name").value;
+    document.getElementById("named").innerHTML = n;
+    document.getElementById("name-container").style.display = "none";
+    document.getElementById("named").style.display = "block";
+  };
+
 function updateProgressBar(id) {
     const target = document.querySelector(id);
     const increments = target.querySelectorAll('li');
@@ -11,9 +18,35 @@ function updateProgressBar(id) {
     }
 }
 
-function resetProgressBar(id){
+function resetProgressBar(id) {
     const target = document.querySelector(id);
-    target.innerHTML="";
+    target.innerHTML = "";
+}
+
+//Modified code found on jsfiddle
+var h1 = document.getElementsByTagName('h1')[0],
+    seconds = 0, minutes = 0,
+    t;
+
+function add() {
+    seconds++;
+    if (seconds >= 60) {
+        seconds = 0;
+        minutes++;
+    }
+    
+    h1.textContent = "Age: " + ((minutes ? (minutes > 9 ? minutes : "0" + minutes) : "00")*5);
+
+    timer();
+}
+
+function timer() {
+    t = setTimeout(add, 1000);
+}
+timer();
+
+stop.deadTama = function() {
+    clearTimeout(t);
 }
 
 const foodBtn = document.getElementById('foodBtn');
@@ -23,7 +56,7 @@ foodBtn.addEventListener('click', function (event) {
     resetProgressBar('#hunger');
     mouth.classList.remove('foodAnimation');
     mouth.classList.add('foodAnimation');
-    setTimeout(function () {
+    setInterval(function () {
         mouth.classList.remove('animate');
     }, 1000);
 });
@@ -32,6 +65,7 @@ const restBtn = document.getElementById('restBtn');
 const body = document.getElementsByClassName('light');
 
 restBtn.addEventListener('click', function lightsOut(event) {
+    resetProgressBar('#exhaustion');
     let element = document.body;
     element.classList.toggle("dark");
 });
@@ -40,9 +74,10 @@ const playBtn = document.getElementById('playBtn');
 const ball = document.getElementById('ball');
 
 playBtn.addEventListener('click', function (event) {
+    resetProgressBar('#boredom');
     ball.classList.remove('playAnimation');
     ball.classList.add('playAnimation');
-    setTimeout(function () {
+    setInterval(function () {
         ball.classList.remove('animate');
     }, 1000)
 });
@@ -57,12 +92,11 @@ ball.addEventListener('animationend', function () {
 });
 
 function deadtama() {
-    console.log('I ded');
-    //add animation here
+    //alert('Game Over');
 }
 
 
-setInterval(function(){ 
+setInterval(function () {
     updateProgressBar('#hunger');
     updateProgressBar('#exhaustion');
     updateProgressBar('#boredom');

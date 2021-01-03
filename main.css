@@ -1,19 +1,19 @@
 body {
     background-color: cornflowerblue;
     min-height: 100vh;
-}
-
-.light {
+  }
+  
+  .light {
     --ghostBody-color: rgb(247, 228, 85);
     --border-color: black;
-}
-
-.dark {
+  }
+  
+  .dark {
     --ghostBody-color: cyan;
     --border-color: white;
-}
-
-#tamaConsole {
+  }
+  
+  #tamaConsole {
     position: absolute;
     top: 50%;
     left: 50%;
@@ -23,12 +23,12 @@ body {
     background-image: url(/Assets/LVpattern.jpg);
     background-color: lavender;
     background-position: center;
-    border-radius:50%;
+    border-radius: 50%;
     border: 10px solid hotpink;
-}
-
-#emboss {
-    opacity: .5;
+  }
+  
+  #emboss {
+    opacity: 0.5;
     top: 23.25%;
     left: 19%;
     background: hotpink;
@@ -45,9 +45,9 @@ body {
     background: hotpink;
     transform: rotate(135deg);
   }
-
+  
   p {
-    font-family: 'Lobster', cursive;
+    font-family: "Lobster", cursive;
     text-align: center;
     position: relative;
     color: gold;
@@ -59,74 +59,113 @@ body {
     -webkit-text-stroke-color: black;
     font-size: 36px;
     z-index: 4;
-}
-
-#tamaScreen {
+  }
+  
+  #tamaScreen {
     position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    background-image: url('/assets/lightbackground.jpg');
+    background-image: url("/assets/lightbackground.jpg");
     background-color: darkgray;
     background-position: center;
     border: 2px solid hotpink;
     height: 400px;
     width: 400px;
-}
+  }
+  
+  .dark #tamaScreen {
+    background-image: url("/Assets/darkbackground.jpg");
+  }
 
-.dark #tamaScreen {
-    background-image: url('/Assets/darkbackground.jpg')
-}
+  #name-container {
+    position: absolute;
+    height: 400px;
+    width: 400px;
+    border: 1px solid black;
+    background: lavender;
+    text-align: center;
+  }
 
-#friendo { 
+  
+    h2 {
+    color: pink;
+    -webkit-text-stroke-width: 1px;
+    -webkit-text-stroke-color: black;
+  }
+  
+  #named {
+    left: 50%;
+    top: -11%;
+    position: absolute;
+    background: none;
+    color: greenyellow;
+  }
+
+  #nameTheGhost {
+    position: relative;
+    top: 34%;
+  }
+  
+  
+  h1 {
+    position: absolute;
+    top: -6%;
+    color: greenyellow;
+    -webkit-text-stroke-width: 2px;
+    -webkit-text-stroke-color: black;
+    font-size: 30px;
+  }
+  
+  #friendo {
     position: relative;
     animation-name: waiting;
     animation-duration: 1.5s;
     animation-timing-function: ease-out;
     animation-iteration-count: infinite;
     animation-direction: alternate;
-}
-
-.ghostBody {
+  }
+  
+  .ghostBody {
     border-radius: 50% 50% 0 0;
     height: 50px;
     width: 80px;
     padding: 50px 0 0 0;
     background-color: var(--ghostBody-color);
-    opacity: .85;
+    opacity: 0.85;
     border: 1px solid var(--border-color);
-}
-
-.eyes {
+  }
+  
+  .eyes {
     position: relative;
     bottom: 43%;
     left: 17%;
-}
-
-.dark .eyes {
+  }
+  
+  .dark .eyes {
     display: none;
-}
-
-.heart.left{
+  }
+  
+  .heart.left {
     position: absolute;
     width: 60px;
     height: 50px;
   }
-.heart.right {
+  .heart.right {
     position: absolute;
     width: 60px;
-    height: 50px; 
+    height: 50px;
     left: 40%;
-}
+  }
   .heart:before,
-  .heart:after{
+  .heart:after {
     position: absolute;
     content: "";
     left: 10px;
     top: 0;
     width: 10px;
     height: 20px;
-    background:  rgb(252, 178, 252);
+    background: rgb(252, 178, 252);
     border-radius: 50px 50px 0 0;
     transform: rotate(-45deg);
     transform-origin: 0 100%;
@@ -136,8 +175,8 @@ body {
     transform: rotate(45deg);
     transform-origin: 100% 100%;
   }
-
-#mouth {
+  
+  #mouth {
     top: 184%;
     position: relative;
     width: 0px;
@@ -148,145 +187,151 @@ body {
     border-bottom-right-radius: 50px;
     border-bottom-left-radius: 50px;
     overflow: hidden;
-   }
-
-   #mouth:before {
-    content: '';
+  }
+  
+  #mouth:before {
+    content: "";
     width: 50px;
     height: 40px;
     background-color: yellowgreen;
     display: block;
     border-radius: 50%;
     margin: 10px auto 0px auto;
-   }
-
-#ball {
-    position: absolute; 
+  }
+  
+  #ball {
+    position: absolute;
     border-radius: 50%;
     width: 0px;
     height: 0px;
     background-color: rgb(252, 178, 252);
     border: 1px solid black;
     left: 15px;
-}
-
-.foodAnimation {
+  }
+  
+  .foodAnimation {
     animation-name: food;
-    animation-duration: .5s;
+    animation-duration: 0.5s;
     animation-timing-function: linear;
     animation-iteration-count: 5.5;
     animation-direction: alternate;
-}
-
-.playAnimation {
+  }
+  
+  .playAnimation {
     animation-name: play;
     animation-duration: 2s;
     animation-timing-function: linear;
     animation-iteration-count: 2;
     animation-direction: alternate;
-}
-
-@keyframes waiting {
-    from {
-        margin-top: 150px;
-        margin-left: 157px;
-    }
-
-    to {
-        margin-top: 200px;
-        margin-left: 157px;
-    }
-}
-
-@keyframes food { 
-    from {
-        width: 0px;
-        height: 0px;
-    }
-
-    to {
-        width: 70px;
-        height: 20px;
-    }
-}
-
-@keyframes play {
-    from {
-        height: 0px;
-        width: 0px;
-        top: 200px;
-        left: 0px
-    }
-
-    25% {
-        height: 40px;
-        width: 40px;
-        top: 250px;
-        left: 88px;
-    }
-
-    50% {
-        top: 300px;
-        left: 176px;
-    }
-
-    75% {
-        top: 250px;
-        left: 264px;
-    }
-
-    to {
-        top: 200px;
-        left: 355px; 
-    }
-
-}
-
-.progressBar {
-    padding: 5px;
-}
-
-  li {
-      list-style-type: none;
-      background-color: yellowgreen;
-      height: 20px;
-      width: 10%;
-      float: left;
   }
   
-#buttons {
+  @keyframes waiting {
+    from {
+      margin-top: 150px;
+      margin-left: 157px;
+    }
+  
+    to {
+      margin-top: 200px;
+      margin-left: 157px;
+    }
+  }
+  
+  @keyframes food {
+    from {
+      width: 0px;
+      height: 0px;
+    }
+  
+    to {
+      width: 70px;
+      height: 20px;
+    }
+  }
+  
+  @keyframes play {
+    from {
+      height: 0px;
+      width: 0px;
+      top: 200px;
+      left: 0px;
+    }
+  
+    25% {
+      height: 40px;
+      width: 40px;
+      top: 250px;
+      left: 88px;
+    }
+  
+    50% {
+      top: 300px;
+      left: 176px;
+    }
+  
+    75% {
+      top: 250px;
+      left: 264px;
+    }
+  
+    to {
+      top: 200px;
+      left: 355px;
+    }
+  }
+
+  .progressBar {
+    position: relative;
+    padding: 5px;
+    width: 100px;
+    float: left;
+    align-items: center;
+    left: 8.5%;
+    top: 85%;
+  }
+  
+  li {
+    list-style-type: none;
+    background-color: cyan;
+    height: 20px;
+    width: 10%;
+    float: left;
+  }
+  
+  #buttons {
     position: relative;
     top: 32%;
     left: 26%;
     z-index: 4;
-}
-
-button {
+  }
+  
+  button {
     margin: 0 21px 0 21px;
     height: 50px;
     width: 50px;
     background-color: rgb(252, 178, 252);
     border-radius: 50%;
-}
-
-.button input {
-    display:none;
   }
-
-#foodBtn {
+  
+  .button input {
+    display: none;
+  }
+  
+  #foodBtn {
     color: rgb(225, 51, 75);
-}
-
-#restBtn {
+  }
+  
+  #restBtn {
     color: rgb(231, 254, 77);
-}
-
-#playBtn {
+  }
+  
+  #playBtn {
     color: rgb(79, 153, 221);
-}
-
-i {
+  }
+  
+  i {
     font-size: 27px;
     -webkit-text-stroke-width: 1px;
     -webkit-text-stroke-color: black;
-}
+  }
+  
