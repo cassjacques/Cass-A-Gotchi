@@ -1,3 +1,4 @@
+
 function nameTheGhost() {
     var n = document.getElementById("name").value;
     document.getElementById("named").innerHTML = n;
@@ -53,6 +54,7 @@ const foodBtn = document.getElementById('foodBtn');
 const mouth = document.getElementById('mouth');
 
 foodBtn.addEventListener('click', function (event) {
+    
     resetProgressBar('#hunger');
     mouth.classList.remove('foodAnimation');
     mouth.classList.add('foodAnimation');
