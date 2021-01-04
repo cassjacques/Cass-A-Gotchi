@@ -101,4 +101,4 @@ setInterval(function () {
     updateProgressBar('#hunger');
     updateProgressBar('#exhaustion');
     updateProgressBar('#boredom');
-}, 1000);
+}, 10000);
