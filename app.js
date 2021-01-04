@@ -1,4 +1,3 @@
-
 function nameTheGhost() {
     var n = document.getElementById("name").value;
     document.getElementById("named").innerHTML = n;
