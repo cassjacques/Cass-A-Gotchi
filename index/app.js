@@ -94,7 +94,7 @@ ball.addEventListener('animationend', function () {
 });
 
 function deadtama() {
-    //alert('Game Over');
+    alert('Game Over');
 }
 
 

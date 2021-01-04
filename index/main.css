@@ -56,10 +56,9 @@ body {
     width: 325px;
     left: 21%;
     bottom: 55%;
-    -webkit-text-stroke-width: 2px;
+    -webkit-text-stroke-width: 1px;
     -webkit-text-stroke-color: black;
     font-size: 36px;
-    z-index: 4;
   }
   
   #tamaScreen {
@@ -111,7 +110,7 @@ body {
     position: absolute;
     top: -6%;
     color: greenyellow;
-    -webkit-text-stroke-width: 2px;
+    -webkit-text-stroke-width: 1px;
     -webkit-text-stroke-color: black;
     font-size: 30px;
   }
