@@ -3,7 +3,7 @@ function nameTheGhost() {
     document.getElementById("named").innerHTML = n;
     document.getElementById("name-container").style.display = "none";
     document.getElementById("named").style.display = "block";
-  };
+};
 
 function updateProgressBar(id) {
     const target = document.querySelector(id);
@@ -34,8 +34,8 @@ function add() {
         seconds = 0;
         minutes++;
     }
-    
-    h1.textContent = "Age: " + ((minutes ? (minutes > 9 ? minutes : "0" + minutes) : "00")*5);
+
+    h1.textContent = "Age: " + ((minutes ? (minutes > 9 ? minutes : "0" + minutes) : "00") * 5);
 
     timer();
 }
@@ -45,7 +45,7 @@ function timer() {
 }
 timer();
 
-stop.deadTama = function() {
+stop.deadTama = function () {
     clearTimeout(t);
 }
 
@@ -53,7 +53,7 @@ const foodBtn = document.getElementById('foodBtn');
 const mouth = document.getElementById('mouth');
 
 foodBtn.addEventListener('click', function (event) {
-    
+
     resetProgressBar('#hunger');
     mouth.classList.remove('foodAnimation');
     mouth.classList.add('foodAnimation');
