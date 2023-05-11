@@ -1,0 +1,29 @@
+Player clicks start to progress to the name screen.
+Player inputs a name & clicks submit.
+Player is greeted by tama and is prompted to press another start button
+
+once through the introductory screen the player will see the name, age, and 3progress bars. The user will also be presented with 3 buttons that correspond to the 3 progress bars: food, rest, entertainment.
+
+If the user clicks the food button the food bar will fill.
+
+If the user clicks the drowsiness/sleep button the screen colors will invert, the tama will sleep, and the rest bar will fill.
+
+If the user clicks boredom/play a ball (or other toy) will pop onto the screen and the entertainment bar will fill.
+
+^original thought process^
+
+
+Here's what we actually ended up with:
+
+(I used a little rpg dialogue for funsies on the starting screen.)
+-The player submits a name in the text input box & presses "Let's go!"
+-the main screen opens showing:
+    -age in the upper lefthand corner
+    -chosen name in the upper righthand corner
+    -rapdily filling progress bars along the bottom of the screen
+-the player can now press the 3 buttons below the corresponding progress bars to keep them at bay and watch as the ghost is fed, put to bed, or played with.
+-over time the age will progress (5 ghost years per one minute) infinitly
+-if the bars aren't kept below 100% the time/age counter will stop and an alert box will show up saying "game over"
+
+
+I chose to go with a bright color pallette & stylized background/aesthetic to keep within the early 2000's nostalgia that tamagotchi's evoke.

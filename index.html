@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.12.1/css/all.css" crossorigin="anonymous">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Lobster&display=swap" rel="stylesheet">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- CSS -->
+    <link rel="stylesheet" href="main.css">
+    </link>
+    <!-- JS -->
+    <script src="/app.js" defer></script>
+    <title>Tamagotchi</title>
+</head>
+
+<body class="light">
+    <div id="tamaConsole">
+
+        <div id="emboss"></div>
+
+        <section id="buttons">
+            <button class="button" id="foodBtn"><i class="fas fa-utensils"></i></button>
+            <button class="button" id="playBtn"><i class="fas fa-basketball-ball"></i></button>
+            <button class="button" id="restBtn"><i class="fas fa-bed"></i></button>
+        </section>
+
+        <p>Unlicensed Egg Watch</p>
+        <section id="tamaScreen">
+
+            <ul class="progressBar" id="hunger"></ul>
+            <ul class="progressBar" id="boredom"></ul>
+            <ul class="progressBar" id="exhaustion"></ul>
+
+            <h1><time>00:00</time></h1>
+            <div id="name-container">
+                <h2>A small ghost appears in front of you!</h2>
+                <input type="text" id="name" placeholder="What's my name?">
+                <h2>I can't remember but that sounds right!</h2>
+                <button id="nameTheGhost" onclick="nameTheGhost()">Let's go!</button>
+            </div>
+            <p id="named" style="none"></p>
+
+            <div id="ball"></div>
+
+            <div id="friendo">
+                <div class="ghostBody">
+                    <section class="eyes">
+                        <div class="heart left"></div>
+                        <div class="heart right"></div>
+                    </section>
+                    <section id="mouth"></section>
+                </div>
+            </div>
+        </section>
+    </div>
+    </div>
+
+
+
+</body>
+
+</html>
